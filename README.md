@@ -1,46 +1,34 @@
-puppet-monophylizer
+role_duplicity
 ===================
 
-Puppet module to install 
+Puppet module to install duplicity
 
-For more information using this tool: 
+ 
 
 Parameters
 -------------
-All parameters are read from hiera
+All parameters are read from foreman
 
 Classes
 -------------
+role_duplicity
 - 
 
 Dependencies
 -------------
+jimdo/duplicity  ( customized to accept array: $directories instead of string : $directory
 - 
-
-Examples
--------------
-Hiera yaml
-```
-sample1:
-    param: 'sampledata'
-```
-Puppet code
-```
-class { thisclass: }
-```
-Result
--------------
 
 
 Limitations
 -------------
-This module has been built on and tested against Puppet ... and higher.
+This module has been built as a customized frontend for duplicity in a foreman environment.
 
 The module has been tested on:
-- 
+- Ubuntu 12,04LTS
 - 
 
 Authors
 -------------
-Author Name <p.gomersbach@gmail.com>
+Author Name <hugo.vanduijn@naturalis.nl>
 
