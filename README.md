@@ -13,10 +13,10 @@ Classes
 -------------
 role_duplicity
 - 
+jimdo/duplicity  ( customized to accept array: $directories instead of string : $directory
 
 Dependencies
 -------------
-jimdo/duplicity  ( customized to accept array: $directories instead of string : $directory
 - 
 
 
@@ -25,8 +25,8 @@ Limitations
 This module has been built as a customized frontend for duplicity in a foreman environment.
 
 The module has been tested on:
-- Ubuntu 12.04LTS
 - 
+Ubuntu 12.04LTS
 
 Authors
 -------------
