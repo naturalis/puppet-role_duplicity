@@ -3,7 +3,6 @@ role_duplicity
 
 Puppet module to install duplicity
 
- 
 
 Parameters
 -------------
@@ -11,13 +10,13 @@ All parameters are read from foreman
 
 Classes
 -------------
+-
 role_duplicity
-- 
-jimdo/duplicity  ( customized to accept array: $directories instead of string : $directory
 
 Dependencies
 -------------
 - 
+jimdo/duplicity  ( customized to accept array: $directories instead of string : $directory
 
 
 Limitations
