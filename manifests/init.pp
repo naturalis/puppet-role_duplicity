@@ -2,29 +2,31 @@
 #
 #
 class role_duplicity (  
-  $directories = ['/etc','/tmp/backup','/home'],
-  $bucket = 'linuxbackups',
+  $directories           = ['/etc','/tmp/backup','/home'],
+  $bucket                = 'linuxbackups',
   $dest_id,
   $dest_key,
-  $cloud = 's3',
-  $hour = 1,
-  $minute = 1,
-  $full_if_older_than = 30,
-  $pre_command = undef,
-  $remove_older_than = 31) {
+  $cloud                 = 's3',
+  $hour                  = 1,
+  $minute                = 1,
+  $full_if_older_than    = 30,
+  $pre_command           = undef,
+  $remove_older_than     = 31,
+  $allow_source_mismatch = false, ) {
 
   duplicity { 'backupjob':
-    directories         => $directories,
-    folder              => '',
-    bucket              => $bucket,
-    dest_id             => $dest_id,
-    dest_key            => $dest_key,
-    cloud               => $cloud,
-    hour                => $hour,
-    minute              => $minute,
-    remove_older_than   => $remove_older_than,
-    full_if_older_than  => $full_if_older_than,
-    pre_command         => $pre_command,
+    directories           => $directories,
+    folder                => '',
+    bucket                => $bucket,
+    dest_id               => $dest_id,
+    dest_key              => $dest_key,
+    cloud                 => $cloud,
+    hour                  => $hour,
+    minute                => $minute,
+    remove_older_than     => $remove_older_than,
+    full_if_older_than    => $full_if_older_than,
+    pre_command           => $pre_command,
+    allow_source_mismatch => $allow_source_mismatch,
   }
 
   file { "/tmp/backup":
